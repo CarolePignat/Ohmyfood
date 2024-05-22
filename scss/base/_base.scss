@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: $font-text;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}

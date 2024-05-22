@@ -1,0 +1,196 @@
+.rest__image {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+
+    @include medium {
+        max-height: 400px;
+        object-position: center;    
+    }
+}
+
+
+/* Image restaurant La note enchantée */ 
+
+
+.rest__image__note {
+    display: flex;
+    position: relative;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+    @include medium {
+        max-height: 400px;
+    }
+}
+
+
+/* Page menu restaurant */ 
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: $bg-color;
+    border-radius: 45px 45px 0 0;
+    padding: 30px 20px 0 20px;
+    margin-top: -2rem;
+
+    @include large {
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        height: auto; 
+        padding-bottom: 30px;   
+
+        &__title {
+            width: 100%;
+            font-family: $font-logoTitle;
+            font-size: 1.5rem;
+
+            @include small {
+                font-size: 2rem;
+            }
+        }
+
+        .fa-heart {
+            top: 5px;
+            right: 10px; 
+
+            &.fas {
+                color: transparent;                       
+            }
+            
+            &:hover {
+                color: $primary-color;
+                transition: all 1s linear;
+            }
+        }
+    }
+}
+
+
+.menu__page {
+    margin-bottom: 40px;
+
+
+    &__title {
+        @include menuPage-title(); 
+    } 
+
+    &.delay__1 {
+        animation: cards 1s both;
+        animation-delay: 0.5s;
+    }
+
+    &.delay__2 {
+        animation: cards 0.5s both;
+        animation-delay: 1s;
+    }
+
+    &.delay__3 { 
+        animation: cards 0.5s both;
+        animation-delay: 1.5s;
+    }
+}
+    
+
+
+/* Menus - Cartes Entrées, Plats, Desserts */ 
+
+
+.menu__card {
+    @include card;
+
+    @include large {
+        width: 25vw;
+    }
+
+
+    &__description {
+        flex-direction: column;
+        min-width: 0;
+        flex: 1;
+        padding: 15px 0 15px 10px;
+
+        &__title {
+            margin: 0 0 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }      
+
+        &__text {
+            margin: 0 0 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+
+    &__price {  
+        justify-content: flex-end;
+        align-self: flex-end;
+        font-weight: bold;
+        padding-bottom: 20px;
+        margin: 0 20px 0 10px;
+    }
+
+    &__check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0;
+        height: 100%;
+        font-size: 20px;
+        color: #fff;
+        background-color: $tertiary-color;
+        border-radius: 0 20px 20px 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    } 
+}
+
+
+.menu__card:hover .menu__card__check {
+    margin: 0;
+    width: 50px;
+    transition-duration: 0.5s;
+}
+
+.menu__card:hover .fa-check-circle {
+    animation: circle 0.5s;
+}
+
+
+
+/* Bouton "Commander" */ 
+
+
+.menu__btn {
+    align-self: center;
+}
+
+.menu__btn .btn {
+    padding-left: 50px;
+    padding-right: 50px;
+}

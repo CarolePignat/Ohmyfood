@@ -1,0 +1,91 @@
+/* Mixin - Media queries */
+
+$breakpoints: (
+    small: 768px,
+    medium: 991px,
+    large: 1200px
+);
+
+
+@mixin small {
+    @media screen and (min-width: map-get($breakpoints, small)) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (min-width: map-get($breakpoints, medium)) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        @content;
+    }
+}
+
+
+
+/* Mixins - Bouton */ 
+
+@mixin btn {
+    font-size: 1rem;
+    color: #fff;
+    background: $color-gradient;
+    border: none;
+    border-radius: 30px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+} 
+
+
+/* Mixins - Heart */   
+
+@mixin heart {
+    position: relative;
+    justify-self: end;
+    font-size: 2rem;
+} 
+
+
+/* Mixins - Menu card */ 
+
+@mixin menuPage-title {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0%;
+    padding-bottom: 7px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: $tertiary-color;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+
+@mixin card {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 80px;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 3px 4px 3px #eee;
+    cursor: pointer;
+}

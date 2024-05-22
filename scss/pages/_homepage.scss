@@ -1,0 +1,259 @@
+/* Main - partie recherche */
+
+.top__page {
+    background-color: $bg-color;
+
+    .location {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        padding: 5px;
+        background-color: #e2e2e2;
+        border-top: 3px solid #c3c3c3;
+
+        &__search {
+            height: 30px;
+            border: none;
+            width: 150px;
+            color: #000;
+            background-color: #e2e2e2;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .fa-map-marker-alt {
+            font-size: 1.1rem;
+            margin-right: 5px;
+        }
+    }
+
+
+    .presentation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 350px;
+        padding: 20px;
+
+        &__title {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        &__text {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        &__btn {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+/* Section Fonctionnement */
+
+.function {
+    padding: 30px 20px;
+
+    &__title {
+        font-size: 1.5rem;
+    }
+}
+
+.functions {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+
+    @include medium {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        height: 70px;
+        border: none;
+        border-radius: 20px;
+        padding: 0;
+        background-color: $bg-color;
+        box-shadow: 2px 2px 2px 2px #eaeaea;
+        margin: 20px 0 20px 15px;
+        cursor: pointer;
+
+        @include medium {
+            width: 100%;
+            margin-right: 30px;
+        }
+
+
+        &:hover {
+            background-color: #f5edff;
+
+
+            .functions__option__icon {
+                color: $primary-color;
+            }
+        }
+        
+
+        &__number {
+            display: flex;
+            position: absolute;
+            z-index: 2;
+            width: 30px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            border-radius: 50%;
+            background-color: $primary-color;
+            color: $color-text;
+            margin-left: -15px;
+        }
+
+
+        &__icon {
+            display: flex;
+            width: 80px;
+            z-index: 1;
+            font-size: 1.5rem;
+            color: #b2b2b2;
+            padding: 0 30px;
+        }
+
+        &__text {
+            display: flex;
+            z-index: 1;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+/* Section Restaurants */ 
+
+.restaurant {
+    background-color: $bg-color;
+    padding: 40px 20px;
+
+    &__title {
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+
+    &__container {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+
+        @include medium {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;    
+        }
+    }
+
+    &__card {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        background-color: #fff;
+
+        @include medium {
+            width: 45vw;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 70%;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+
+    &__image__palette {
+        object-position: bottom;
+
+        @include small {
+            object-position: center;
+        }
+    }
+
+    &__image__note {
+        object-position: center;
+    }
+
+    &__image__francaise {
+        object-position: bottom;
+
+        @include small {
+            object-position: center;
+        }
+    }
+
+    &__image__delice {
+        object-position: bottom;
+
+       @include small {
+           object-position: center;
+       }
+    }
+
+    &__description {
+        position: relative;
+        color: #000;
+        line-height: 1.5;
+        padding: 20px;
+
+        &__name {
+            font-size: 1.2rem;
+            margin: 0%;
+        }
+
+        &__place {
+            font-size: 1rem;
+            margin: 0%;
+        } 
+    }
+
+    .fa-heart {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+
+        &.fas {
+            color: transparent;
+        }
+
+        &:hover {
+            color: $primary-color;
+            transition: all 1s linear;
+        }
+    }
+
+    &__new {
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        right: 10px;
+        padding: 5px;
+        border-radius: 2px;
+        background-color: $tertiary-color;
+        color: darken($tertiary-color, 40%);
+    }
+}

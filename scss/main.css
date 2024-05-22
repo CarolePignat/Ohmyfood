@@ -1,0 +1,37 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo_ohmyfood {
+  font-family: "shrikhand", sans-serif;
+}
+
+
+/* HEADER */
+
+
+.logo_ohmyfood {
+  display: flex;
+  align-items: center;
+}
+
+/* Main - partie recherche */
+.top_page {
+  background-color: #f6f6f6;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #e2e2e2;
+}/*# sourceMappingURL=main.css.map */

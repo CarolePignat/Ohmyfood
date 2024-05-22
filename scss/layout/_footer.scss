@@ -1,0 +1,41 @@
+footer {
+    width: auto;
+    height: 250px;
+    background-color: $bg-color-footer;
+    padding: 30px;
+}   
+
+.logo__ohmyfood {
+    font-family: $font-logoTitle;
+    font-weight: 200;
+    color: $color-logo-footer;
+    margin: 0%;
+}   
+
+.menu__nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 1.2rem;
+    padding-left: 0;
+
+    &__link {
+        display: flex;
+        align-items: baseline;
+        text-decoration: none;
+        color: $color-text;
+        margin-top: 10px;
+    }
+
+    &__icon {
+        font-family: $font-text;
+    }
+
+    .fa-hands-helping {
+        font-size: 0.9rem;
+    }
+}
+
+.menu__nav a i {
+    width: 35px;
+}
